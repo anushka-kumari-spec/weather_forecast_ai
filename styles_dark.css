@@ -1,0 +1,50 @@
+:root {
+  --primary: #8ab4ff;
+  --accent: #ffd166;
+  --bg-1: #071029;
+  --bg-2: #0b1b2b;
+  --card: rgba(10,20,30,0.6);
+}
+
+html, body, [data-testid="stApp"] {
+  background: linear-gradient(180deg, var(--bg-1), var(--bg-2));
+  font-family: 'Segoe UI', Roboto, system-ui, -apple-system, 'Helvetica Neue', Arial;
+  color: #e8f0ff;
+}
+
+h1, h2, h3 {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+div.block-container {
+  background: linear-gradient(180deg, rgba(8,16,28,0.6), rgba(6,12,22,0.6));
+  padding: 1.6rem 2rem !important;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+}
+
+.stButton>button {
+  background: linear-gradient(90deg,var(--primary),#4b7ed6) !important;
+  color: #021728 !important;
+  border-radius: 10px !important;
+  padding: 8px 14px !important;
+  font-weight: 700;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+}
+
+.stMetric {
+  background: var(--card) !important;
+  border-radius: 10px !important;
+  padding: 10px 14px !important;
+}
+
+.stDataFrame table {
+  border-collapse: separate !important;
+  border-spacing: 0 8px !important;
+}
+
+@media (max-width: 600px) {
+  div.block-container { padding: 1rem !important; }
+  .stButton>button { width: 100% !important; }
+}

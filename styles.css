@@ -1,0 +1,73 @@
+:root {
+  --primary: #0f4c81;
+  --accent: #ffd166;
+  --bg-1: #f0f7ff;
+  --bg-2: #ffffff;
+  --card: rgba(255,255,255,0.8);
+}
+
+/* Page background and base font */
+html, body, [data-testid="stApp"] {
+  background: linear-gradient(135deg, var(--bg-1), #eaf6ff);
+  font-family: 'Segoe UI', Roboto, system-ui, -apple-system, 'Helvetica Neue', Arial;
+  color: #0b2447;
+}
+
+/* App title styling */
+h1, h2, h3 {
+  color: var(--primary);
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+/* Make the main container slightly translucent with soft shadow */
+div.block-container {
+  background: linear-gradient(180deg, rgba(255,255,255,0.75), rgba(255,255,255,0.9));
+  padding: 1.6rem 2rem !important;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(10,30,60,0.06);
+}
+
+/* Button styling */
+.stButton>button {
+  background: linear-gradient(90deg,var(--primary),#1460b0) !important;
+  color: #fff !important;
+  border-radius: 10px !important;
+  padding: 8px 14px !important;
+  font-weight: 600;
+  box-shadow: 0 6px 18px rgba(15,76,129,0.12);
+}
+
+/* Metric cards look nicer */
+.stMetric {
+  background: var(--card) !important;
+  border-radius: 10px !important;
+  padding: 10px 14px !important;
+  box-shadow: 0 6px 18px rgba(10,30,60,0.04) !important;
+}
+
+/* DataFrame preview styles */
+.stDataFrame table {
+  border-collapse: separate !important;
+  border-spacing: 0 8px !important;
+}
+
+/* Subtle header separators */
+.stMarkdown hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(11,36,71,0.08), rgba(255,255,255,0));
+  margin: 18px 0;
+}
+
+/* Improve spacing for charts */
+.stLineChart, .stBarChart {
+  padding: 8px !important;
+  background: transparent !important;
+}
+
+/* Small responsive tweak for narrow screens */
+@media (max-width: 600px) {
+  div.block-container { padding: 1rem !important; }
+  .stButton>button { width: 100% !important; }
+}
