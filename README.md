@@ -145,20 +145,3 @@ This project is already a Streamlit app, so the easiest deployment target is Str
 app.py
 ```
 
-5. Deploy the app.
-
-### Vercel Note
-
-This project does not deploy to Vercel as-is because it is a Streamlit application. [Vercel's Python runtime](https://vercel.com/docs/functions/runtimes/python) is designed for Python functions and ASGI/WSGI apps, while Streamlit runs its own interactive app server.
-
-To deploy this project on Vercel, convert the app into a Vercel-compatible structure, for example:
-
-- A FastAPI or Flask backend in an `api/` folder for predictions.
-- A separate frontend built with HTML, React, Next.js, or another Vercel-supported frontend framework.
-- The existing `model/weather_model.pkl` and `model/label_encoder.pkl` loaded by the backend prediction endpoint.
-
-## Notes
-
-- Keep `model/` files in the repository if you want the deployed app to work without retraining.
-- Keep `data/weather_data.csv` in the repository if you want the analytics dashboard to show historical data.
-- The `forecast.py` script is separate from the main Streamlit app and may need dataset columns such as humidity and pressure if you expand the forecasting workflow.
