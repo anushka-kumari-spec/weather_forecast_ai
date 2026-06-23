@@ -23,17 +23,17 @@ Weather Forecast AI is a Streamlit dashboard that predicts weather conditions fr
 
 ```text
 weather_forecast_ai/
-├── app.py                    # Streamlit web app
-├── train.py                  # Model training script
-├── forecast.py               # Experimental forecast/graph script
-├── requirements.txt          # Python dependencies
-├── styles.css                # Light theme styles
-├── styles_dark.css           # Dark theme styles
-├── data/
-│   └── weather_data.csv      # Training dataset
-└── model/
-    ├── weather_model.pkl     # Trained weather model
-    └── label_encoder.pkl     # Weather label encoder
++-- app.py                    # Streamlit web app
++-- train.py                  # Model training script
++-- forecast.py               # Experimental forecast/graph script
++-- requirements.txt          # Python dependencies
++-- styles.css                # Light theme styles
++-- styles_dark.css           # Dark theme styles
++-- data/
+|   +-- weather_data.csv      # Training dataset
++-- model/
+    +-- weather_model.pkl     # Trained weather model
+    +-- label_encoder.pkl     # Weather label encoder
 ```
 
 ## Dataset Format
@@ -137,7 +137,7 @@ git push
 This project is already a Streamlit app, so the easiest deployment target is Streamlit Community Cloud.
 
 1. Push the project to GitHub.
-2. Go to Streamlit Community Cloud.
+2. Go to [Streamlit Community Cloud](https://streamlit.io/cloud).
 3. Create a new app from your GitHub repository.
 4. Set the main file path to:
 
@@ -149,7 +149,7 @@ app.py
 
 ### Vercel Note
 
-This project does not deploy to Vercel as-is because it is a Streamlit application. Vercel's Python support is designed for Python functions and ASGI/WSGI apps, while Streamlit runs its own interactive app server.
+This project does not deploy to Vercel as-is because it is a Streamlit application. [Vercel's Python runtime](https://vercel.com/docs/functions/runtimes/python) is designed for Python functions and ASGI/WSGI apps, while Streamlit runs its own interactive app server.
 
 To deploy this project on Vercel, convert the app into a Vercel-compatible structure, for example:
 
